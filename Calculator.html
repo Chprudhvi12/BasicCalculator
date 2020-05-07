@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="calciStyle.css">
+</head>
+<body>
+	<div id="whole">
+		<p> Caluclator </p>
+	<form>
+			<p id = "result">  </p>
+			<input type="button" class="number" value = "7"
+				onclick="display(value)"> 
+			<input type="button" class="number" value = "8"
+				onclick="display(value)" > 			
+			<input type="button"  class="number" value = "9"
+				onclick="display(value)" > 
+
+			<input type="button" class= "operation" value = "*"
+				onclick="display(value)" > 
+				<br/>
+			 <input type="button"class="number" value = "4"
+				onclick="display(value)" > 
+			 <input type="button" class="number" value = "5"
+				onclick="display(value)" > 
+			 <input type="button" class="number" value = "6"
+				onclick="display(value)" >
+			<input type="button" class= "operation" value = "+"
+				onclick="display(value)" > 
+		<br/>
+			 <input type="button" class="number" value = "1"
+				onclick="display(value)"> 
+			 <input type="button"  class="number" value = "2"
+				onclick="display(value)"> 
+			 <input type="button"  class="number"value = "3"
+				onclick="display(value)" > 
+			<input type="button" class= "operation" value = "-"
+				onclick="display(value)" >
+		<br/>   
+			 <input type="button"  class="zero" value = "0"
+				onclick="display(value)"> 
+				<input type="button"  class="point" value = "."
+				onclick="display(value)"> 
+				<input type="button" class= "operation" value = "/"
+				onclick="display(value)"> 
+				<br/>
+			 <input type="button" class = "equal" value = "="
+				onclick="equal()"> 
+				<input type="button" class = "clear" value = "clear"
+			 	onclick="clearResult()">
+			 
+		</form>
+	</div>
+
+<script type="text/javascript">
+	function clearResult(){
+		var result = document.getElementById('result');
+		result.innerHTML = "";
+	}
+	function display(value){
+		var result = document.getElementById('result');
+		//var con = result.textContent;
+			result.innerHTML += value;
+	}
+
+
+	function equal(){
+		var result = document.getElementById('result');
+		var text = result.textContent;
+		for(var i=0;i<text.length;i++){
+			if(text.charAt(i) == '+'){
+				operation = 1;
+				index = i;
+			}
+			else if(text.charAt(i) == '-'){
+				operation = 2;
+				index = i;
+			}
+			else if(text.charAt(i) == '*'){
+				operation = 3;
+				index = i;
+			}
+			else if(text.charAt(i) == '/'){
+				operation = 4;
+				index = i;
+			}
+
+		}
+		var a = parseInt(text.substring(0,index));
+		var b = parseInt(text.substring(index+1,text.length));
+		if(operation ==1)
+		result.innerHTML = (a + b);
+		if(operation ==2)
+		result.innerHTML = (a - b);
+		if(operation ==3)
+		result.innerHTML = (a * b);
+		if(operation ==4)
+		result.innerHTML = (a / b);
+
+	}
+</script>
+</body>
+</html>

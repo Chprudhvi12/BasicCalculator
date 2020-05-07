@@ -1,0 +1,79 @@
+#result{
+	width: 260px;
+	height : 50px;
+	border : 2px black solid;
+	border-radius: 10%;
+	margin-left: 20px;
+	margin-right: 10px;
+	background-color: rgb(198, 193, 200);
+
+}
+p{
+	text-align: center;
+	font-weight: bold;
+	font-family: times;
+}
+.number{
+	width : 60px;
+	height : 60px;
+	background-color: black;
+	color : white;
+	font-size: 30px;
+	margin-top: 10px;
+	border-radius: 20%;	
+}
+.operation{
+	width : 60px;
+	height : 60px;
+	background-color:rgb(198, 193, 200);
+	color : black;
+	font-size: 30px;
+	border-radius: 20%;
+}
+.zero{
+	width : 120px;
+	height : 60px;
+	background-color: black;
+	color : white;
+	font-size: 20px;
+	margin-top: 10px;
+	border-radius: 20%;
+}
+.point{
+	width : 65px;
+	height : 60px;
+	background-color: black;
+	color : white;
+	font-size: 30px;
+	margin-top: 10px;
+	border-radius: 20%;
+}
+.equal{
+	width : 170px;
+	height : 60px;
+	background-color: rgb(198, 193, 200);
+	color : black;
+	font-size: 30px;
+	margin-top: 10px;
+	border-radius: 20%;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+.clear{
+	width : 80px;
+	height : 40px;
+	background-color:rgb(252, 195, 103);
+	color : black;
+	font-size: 30px;
+	margin-top: 10px;
+	border-radius: 20%;
+}
+div{
+	display : inline-block;
+	margin-left: 200px;
+	margin-right : auto;
+	border : 3px black solid;
+	border-spacing: 10px;
+	background-color: rgb(255, 240, 0);
+	border-radius: 10%;
+}
